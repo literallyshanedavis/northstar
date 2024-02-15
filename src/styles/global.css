@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'PPNeueMachina-InktrapRegular';
+    src: url('/fonts/PPNeueMachina-InktrapRegular.otf') format('opentype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'PPNeueMachina-InktrapUltraBold';
+    src: url('/fonts/PPNeueMachina-InktrapUltraBold.woff') format('opentype');
+    font-weight: 900;
+}
+body{
+    font-family: 'PPNeueMachina-InktrapRegular', sans-serif;
+}
