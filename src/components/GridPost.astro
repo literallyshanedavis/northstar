@@ -1,0 +1,16 @@
+---
+import { Image } from 'astro:assets';
+import FormattedDate from '../components/FormattedDate.astro';
+const { title, pubDate, heroImage, slug, category } = Astro.props
+---
+<div class="relative p-4 text-white">
+    <Image src={heroImage as string} alt={title} width={1000} height={200} class={'object-cover rounded-sm h-[200px]'}/>
+    <div class="py-4">
+        <a href={`/blog/${slug}/`}>
+            <h2 class="text-1xl">{title}</h2>
+            <p class="date text-sm text-red-500">
+                <FormattedDate date={pubDate} />
+            </p>
+        </a>
+    </div>
+</div>

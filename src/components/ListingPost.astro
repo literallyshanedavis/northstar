@@ -1,0 +1,20 @@
+---
+import FormattedDate from '@/components/FormattedDate.astro';
+const { title, pubDate, slug, excerpt, category, heroImage } = Astro.props
+---
+
+
+<div class="py-4">
+<!-- <div class="py-4 border-b-red-900 border-b-2"> -->
+    <a href={`/blog/${slug}/`}>
+        <div class="flex gap-4 pb-4 items-center">
+            <h2 class="text-lg bold">{title}</h4>
+            <p class="date text-sm text-red-500">
+                <FormattedDate date={pubDate} />
+            </p>
+        </div>
+        <p class="text-white font-sans">
+            {excerpt}
+        </p>
+    </a>
+</div>

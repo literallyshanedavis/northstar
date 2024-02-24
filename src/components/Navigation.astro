@@ -1,17 +1,23 @@
-<nav class="fixed top-0 left-0 right-0 text-white">
+---
+const currentPath = Astro.url.pathname
+const lightTheme = currentPath === '/blog' ? 'text-black' : 'text-white'
+---
+
+<nav class=`absolute ${lightTheme} top-0 left-0 z-50 right-0 text-white`>
     <div class="container grid grid-cols-12 py-6">
-        <div class="logo text-2xl col-start-0 col-span-2">
-            <a href="">Northstar</a>
+        <div class="logo text-2xl col-start-0 col-span-2 cursor-pointer">
+            <a href="/">Northstar</a>
         </div>
         <div class="col-start-9 col-span-2">
-            <ul class="flex gap-8">    
+            <ul class="flex gap-8 cursor-pointer">    
                 <li><a href="">Home</a></li>
                 <li><a href="">About</a></li>
-                <li><a href="">Services</a></li>
+                <li><a href="/services">Services</a></li>
             </ul>
         </div>  
-        <div class="col-start-12 col-span-2 flex gap-8">
-            <a href="" class="text-right">News</a>
+        <div class="col-start-12 col-span-2 flex gap-8 cursor-pointer">
+            <a href="/blog
+            " class="text-right">News</a>
             <a href="" class="text-right">Contact</a>
         </div>
     </div>

@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets';
+---
+
+<section class="text-white py-12">
+    <div class="container">
+        <div class="grid grid-cols-12 gap-6">
+            <div class="col-start-0 col-span-6">
+                <Image src='/public/images/tower.jpg' alt="Hero Image" width={800} height={1400} class="w-full object-cover rounded-md" />
+            </div>
+            <div class="col-start-7 col-span-6 border-gray-100/10 border-l-[1px] pl-4 h-full">
+                <div class="flex flex-col gap-24">
+                    <div>
+                        <h2 class="text-6xl">
+                            Data unleashed
+                        </h2>
+                        <h2 class="text-6xl text-secondary bg-gradient-to-r from-gradient-start via-gradient-end-60 to-gradient-end bg-clip-text text-transparent">
+                            Solutions
+                        </h2>
+                    </div>
+                    <div class="grid grid-cols-2 gap-6">
+                        <p class="pr-4">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, voluptates. At non, laudantium corporis dolores hic necessitatibus dolorum dignissimos ut? elit. Minus, voluptates. At non, laudantium corporis dolores hic necessitatibus dolorum dignissimos ut?
+                        </p>
+                        <div class="border-l-[1px] border-gray-100/10">
+                        <p class="pl-4"	>
+                            shane 	Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, voluptates. At non, laudantium corporis dolores hic necessitatibus dolorum dignissimos ut?
+                        </p>
+                    </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</section>

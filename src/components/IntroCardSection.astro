@@ -1,0 +1,34 @@
+---
+import { Image } from 'astro:assets';
+
+---
+
+<section class="w-full h-full py-48  text-white">
+    <div class="container bg-white/5 px-12 py-16 rounded-sm">
+        <div class="grid grid-cols-12 gap-2">
+            <div class="col-start-0 col-span-3">
+                <div class="flex flex-col justify-between h-[900px]">
+                    <div>
+                        <Image src='/public/images/tower.jpg' alt="Hero Image" width={500} height={240} class="w-full h-[220px] object-cover pr-4 rounded-md" />
+                        <p class="text-sm py-6 text-white/70">
+                            When you choose North Star Telecoms, you're not just getting a service provider; you're gaining a partner dedicated to protecting what matters most. Let us be your guiding star for all your communication and security needs.
+                        </p>
+                    </div>
+                    <ul class="text-lg text-highlight">
+                        <li>Connectivity.</li>
+                        <li>Data.</li>
+                        <li>Security.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-start-5 col-span-8 pr-6">
+                <p class="text-5xl leading-none">
+                    North Star Telecoms is your go-to source for comprehensive communication and security solutions. We understand that reliable connectivity and peace of mind are essential for both businesses and homeowners. 
+                </p>
+                <p class="text-5xl leading-none text-white/50">
+                    That's why we specialize in expertly designed and installed data cabling networks, state-of-the-art alarm systems, robust security solutions, and efficient troubleshooting services.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

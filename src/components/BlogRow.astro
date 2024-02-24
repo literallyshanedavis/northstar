@@ -1,0 +1,25 @@
+---
+const { limit } = Astro.props;
+import { getCollection } from 'astro:content';
+const posts = (await getCollection('blog')).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+import GridPost from "@/components/GridPost.astro"
+---
+
+<section class="container py-24">
+    <div class="flex">
+        <h2 class="text-3xl py-4">
+            Recent Posts
+        </h2>
+    </div>
+    <div class="grid grid-cols-4">
+        {
+            posts.slice(0, limit).map((post, index) => (
+            <div>
+                <GridPost title={post.data.title} pubDate={post.data.pubDate} heroImage={post.data.heroImage} category={post.data.category} slug={post.slug}/>
+            </div>
+            ))
+        }
+    </div>
+</section>
